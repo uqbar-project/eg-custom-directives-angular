@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" ng-app="customDirectivesApp">
+<!-- TODO:
+	BAJAR TODOS LOS .JS Y CSS A ARCHIVOS LOCALES
+  -->
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejemplos de Directivas Custom de Angular</title>
+    <link rel="stylesheet" href="css/app.css"/>
+
+	<!-- JQUERY -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<!-- BOOTSTRAP -->	
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	
+	<!-- ANGULAR  -->
+  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.7/angular.min.js"></script>
+</head>
+
+<body data-ng-controller="CustomDirectivesCtrl">
+	
+<div class="navbar-header">
+    <a class="navbar-brand" rel="home" href="#" title="Libros"><img style="max-width:100px; margin-top: -7px;" src="images/logo-libros.jpg"></a>
+</div>
+
+<div class="container">
+	<div class="page-header">
+	  <h1>Ejemplos de Custom Directives &nbsp;<small>AngularJS</small></h1>
+	</div>
+	
+	<!-- PRIMER EJEMPLO -->
+	<div class="row">
+
+   		<!-- 1) USADO COMO ELEMENTO -->
+		<h3>Directiva HolaMundo (como elemento nuevo)</h3>   		
+   		<div class="panel panel-default"><div class="panel-body">
+   			<hola-mundo>Se va a reemplazar</hola-mundo> 	
+   		</div></div>
+
+   		<!-- 1) USADO COMO ATRIBUTO -->
+   		<h3>Directiva HolaMundo (como atributo)</h3>
+   		<div class="panel panel-default"><div class="panel-body">
+   			<div hola-mundo>Se va a reemplazar</div>		<!-- como atributo 'A' -->
+   		</div></div>
+   		
+   	
+   		<!-- CON ACCESO AL SCOPE -->
+   		<h3>Con acceso al Scope</h3>
+   		<div class="panel panel-default"><div class="panel-body">
+   			<div hola-mundo>Se va a reemplazar</div>		
+   		</div></div>
+   		
+   		
+   		<!-- 
+   			<div hola-html-propio>Se va a reemplazar</div>	
+   		 -->
+	</div>
+	
+	
+	
+	
+	<!-- SEGUNDO EJEMPLO -->
+	<div class="row">
+		<!-- PASANDO OBJETOS A SCOPE (scope propio) -->
+		<h3>Con Scope Propio (pasaje de parametro)</h3>
+		<div class="panel panel-default"><div class="panel-body">
+   			<saludo a="juan">Se va a reemplazar</saludo>
+   		</div></div> 	
+	</div>
+	
+	
+	<!-- TERCER EJEMPLO: compile y link -->
+	<div class="row">
+		
+		<!-- SOLO COMPILE -->
+		<h3>Directiva con compile()</h3>
+		<div class="panel panel-default"><div class="panel-body">
+   			<error>Error: Se rompi&oacute; todo !!!</error>
+   		</div></div>
+   		
+   		
+   		
+   		<!-- SOLO LINK (SALDO) -->
+   		<h3>Directiva con link() (Saldo):</h3>
+		<div class="panel panel-default"><div class="panel-body">
+			<button ng-click="decrementarSaldo()" >-</button>
+   			<saldo>{{saldo}}</saldo>
+   			<button ng-click="incrementarSaldo()" >+</button>
+   		</div></div>
+   		
+   		<!-- SALDO CON BINDING -->
+   		<h3>Saldo con binding:</h3>
+		<div class="panel panel-default"><div class="panel-body">
+			<button ng-click="decrementarSaldo()" >-</button>
+   			<balance>{{saldo}}</balance>
+   			<button ng-click="incrementarSaldo()" >+</button>
+   		</div></div>
+   		
+   		 	
+	</div>
+	
+</div>
+
+
+
+
+  <!-- nuestros jscript -->
+  <script src="js/app.js"></script>  
+  <script src="js/controllers.js"></script>
+
+</body>
+</html>
+
