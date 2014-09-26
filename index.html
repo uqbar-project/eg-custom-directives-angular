@@ -32,14 +32,20 @@
 	  <h1>Ejemplos de Custom Directives &nbsp;<small>AngularJS</small></h1>
 	</div>
 	
+	<form class="form-search">
+	  <input ng-model="mensaje" type="text" class="input-medium search-query">
+	</form>
+	
 	<!-- PRIMER EJEMPLO -->
 	<div class="row">
 
    		<!-- 1) USADO COMO ELEMENTO -->
 		<h3>Directiva HolaMundo (como elemento nuevo)</h3>   		
    		<div class="panel panel-default"><div class="panel-body">
-   			<hola-mundo>Se va a reemplazar</hola-mundo> 	
+   			<hola-mundo></hola-mundo> 	
    		</div></div>
+   		
+
 
    		<!-- 1) USADO COMO ATRIBUTO -->
    		<h3>Directiva HolaMundo (como atributo)</h3>
@@ -47,19 +53,28 @@
    			<div hola-mundo>Se va a reemplazar</div>		<!-- como atributo 'A' -->
    		</div></div>
    		
+   		
+   		
+   		
+   		
    	
    		<!-- CON ACCESO AL SCOPE -->
    		<h3>Con acceso al Scope</h3>
    		<div class="panel panel-default"><div class="panel-body">
-   			<div hola-mundo>Se va a reemplazar</div>		
+   			<div hola-parametrico>Se va a reemplazar</div>		
    		</div></div>
+   		
+   		
+   		
+   		
    		
    		
    		<!-- 
    			<div hola-html-propio>Se va a reemplazar</div>	
    		 -->
 	</div>
-	
+
+
 	
 	
 	

@@ -3,7 +3,7 @@
 var app = angular.module('customDirectivesApp', []);
 
 /* Controllers */
-app.controller('CustomDirectivesCtrl', function ($scope) {
+app.controller('CustomDirectivesCtrl', function ($scope, $http) {
 	
 	$scope.juan = {
 			nombre : 'Juan',
@@ -11,12 +11,16 @@ app.controller('CustomDirectivesCtrl', function ($scope) {
 			edad : 32
 	}
 	
-	$scope.mensaje = 'Mundo'
+	$scope.mensaje = 'Mundo En el Scope'
 
 		
-	$scope.saldo = 23
-	$scope.incrementarSaldo = function() { $scope.saldo++ }
-	$scope.decrementarSaldo = function() { $scope.saldo-- }
+	$scope.saldo = -2
+	$scope.incrementarSaldo = function() { 
+		$scope.saldo++ 
+	}
+	$scope.decrementarSaldo = function() { 
+		$scope.saldo--
+	}
 });
 
 
@@ -29,7 +33,7 @@ app.controller('CustomDirectivesCtrl', function ($scope) {
 app.directive('holaMundo', function() {
     return {
     	restrict : 'AE',
-    	template : "Hola Mundo !!!"
+    	template : "<input type=text value='Hola Mundo !!!'/>"
     }
 });
 
@@ -39,7 +43,7 @@ app.directive('holaMundo', function() {
 // 2 - con acceso al scope
 app.directive('holaParametrico', function() {
     return {
-    	restrict : 'E',
+    	restrict : 'AE',
     	template : "Hola {{mensaje}} !!!"
     }
 });
@@ -59,7 +63,7 @@ app.directive('holaHtmlPropio', function() {
 app.directive('saludo', function() {
     return {
     	restrict : 'E',
-    	template : 'Hola {{ aQuien.nombre }}!!!',
+    	template : 'Hola {{ aQuien.apellido }}!!!',
     	scope : {
     		aQuien : "=a"
     	}
