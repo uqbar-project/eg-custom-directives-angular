@@ -3,23 +3,23 @@
 var app = angular.module('customDirectivesApp', []);
 
 /* Controllers */
-app.controller('CustomDirectivesCtrl', function ($scope, $http) {
+app.controller('CustomDirectivesCtrl', function () {
 	
-	$scope.juan = {
+	this.juan = {
 			nombre : 'Juan',
 			apellido : 'Perez',
 			edad : 32
 	}
 	
-	$scope.mensaje = 'Mundo En el Scope'
+	this.mensaje = 'Mundo En el Scope'
 
 		
-	$scope.saldo = -2
-	$scope.incrementarSaldo = function() { 
-		$scope.saldo++ 
+	this.saldo = -2
+	this.incrementarSaldo = function() { 
+		this.saldo++ 
 	}
-	$scope.decrementarSaldo = function() { 
-		$scope.saldo--
+	this.decrementarSaldo = function() { 
+		this.saldo--
 	}
 });
 

@@ -1,0 +1,23 @@
+{
+  "name": "custom-directives-angular",
+  "version": "1.0.0",
+  "description": "Hola mundo con directivas Angular",
+  "main": "''",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uqbar-project/eg-custom-directives-angular"
+  },
+  "keywords": [
+    "angular",
+    "directives"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootbox": "^4.4.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "loading-bar": "0.0.2"
+  }
+}
